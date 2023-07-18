@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+  background-color: pink;
+}
+
+.signup-container {
+  width: 350px;
+  height: 300px;
+  margin: 100px auto;
+  padding: 60px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px black;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
+
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="signup-container">
+      <h2><i><u>Sign Up</u></i></h2>
+    <form action="{{url_for('signup')}}" method="post" autocomplete="off">
+      <input type="text" placeholder="Username" name="uname" required>
+      <input type="password" placeholder="Password" name="upass" required>
+        <input type="text" placeholder="Enter the course name" name="ucourse" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="{{url_for('home')}}">Login</a></p>
+  </div>
+</body>
+</html>
